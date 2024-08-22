@@ -1,0 +1,171 @@
+.textone{            
+    font-size: 26px; /* ขนาดฟอนต์ */
+    line-height: 13px;            
+    color: white; /* สีตัวหนังสือเป็นสีขาว */
+    text-align: center; /* จัดกึ่งกลางข้อความ */
+        }
+.texttwo {font-size: 20px;
+     color: #d4ecff;
+    text-align: center;}
+        
+        /* สไตล์สำหรับ Header */
+nav {
+    width: 100%;
+    height: 70px;
+    background-color: #639ef0; /* พื้นหลังสีฟ้า */
+    padding: 20px; /* ระยะห่างภายใน */
+    position: fixed; /* ทำให้ Header ติดอยู่ด้านบนตลอด */
+    top: 0;
+    width: 100%; /* กำหนดให้ความกว้างเต็มหน้าจอ */
+    z-index: 20; /* ทำให้ Header อยู่ด้านบนสุด */
+}
+        /* สไตล์สำหรับเนื้อหา */
+.content {
+    margin-top: 10px; /* ระยะห่างจากด้านบนเพื่อไม่ให้ทับกับ Header */
+    padding: 10px;
+    }
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    
+    nav {
+        width: 100%;
+        height: 70px;
+        background-color: #639ef0;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        z-index: 20;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .textone {
+        font-size: 26px;
+        padding: 1rem;
+        color: rgb(255, 255, 255);
+        margin: 0;
+    }
+    
+    .texttwo {
+        font-size: 20px;
+        color: #ffffff;
+        margin: 0;
+    }
+    
+    .container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+        margin-top: 90px; /* เพิ่มระยะห่างจาก header */
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 25px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: transform 0.3s ease, z-index 0.3s ease;
+        transform: translateZ(0);
+    }
+    .card .text-title {
+        display: inline-block;
+        color: #333;
+        background-color: #f0f0f0;
+        text-decoration: none;
+        border-radius: 5px;
+        padding: 0.3rem 0.6rem;
+        font-size: 1rem;
+        margin-top: 0.5rem;
+        text-align: center;
+    }
+    .card .text-title:hover {
+        transform: scale(1.1);
+        z-index: 2;
+        background-color: #fa7b7b;
+
+    }
+    
+    .card img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+    
+    /* เมื่อเอาเมาส์ไปโฮเวอร์การ์ด */
+    .card:hover {
+        transform: translateZ(50px);
+        z-index: 10;
+    }
+    
+    /* คลิกการ์ด */
+    .card:active {
+        transform: translateZ(20px);
+    }
+    
+    .card:hover img {
+        transform: scale(1.1);
+    }
+    
+    .text-date, .text-title {
+        position: absolute;
+        color: rgb(0, 0, 0);
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+        left: 10px;
+        margin: 0;
+    }
+    
+    .text-date {
+        bottom: 40px;
+        font-size: 16px;
+    }
+    
+    .text-title {
+        bottom: 10px;
+        font-size: 18px;
+    }
+   .blog-title{
+    margin: 1rem;
+    display: inline-block;
+    color: #ffffff;
+    background-color: #c9c9c9;
+    border-radius: 8px;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+
+   }
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+    .textone {
+        font-size: 1.25rem;
+    }
+
+    .texttwo {
+        font-size: 1rem;
+    }
+
+    nav {
+        padding: 0.625rem;
+    }
+
+    .container {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+}

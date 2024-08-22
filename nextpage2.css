@@ -1,0 +1,110 @@
+.textone{            
+    font-size: 26px; /* ขนาดฟอนต์ */
+    line-height: 9px;            
+    color: white; /* สีตัวหนังสือเป็นสีขาว */
+    text-align: center; /* จัดกึ่งกลางข้อความ */
+        }
+.texttwo {font-size: 20px;
+     color: #d4ecff;
+    text-align: center;}
+        
+        /* สไตล์สำหรับ Header */
+nav {
+    width: 100%;
+    height: 70px;
+    background-color: #639ef0; /* พื้นหลังสีฟ้า */
+    padding: 20px; /* ระยะห่างภายใน */
+    position: fixed; /* ทำให้ Header ติดอยู่ด้านบนตลอด */
+    top: 0;
+    width: 100%; /* กำหนดให้ความกว้างเต็มหน้าจอ */
+    z-index: 20; /* ทำให้ Header อยู่ด้านบนสุด */
+}
+.button {
+  margin-top: 8rem;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  color: #639ef0;
+  padding:15px 30px ;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-left: 2rem;
+  
+}
+
+.button:hover {
+  background-color: #639ef0;
+  color: #ffffff;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.2);
+  
+}
+h1.mix{
+    margin: auto;
+    width: 300px;
+    border : 1px solid rgb(13, 13, 13) ;
+    border-radius: 20px;
+    background-color:rgb(244, 207, 84);
+    text-align: center; /* จัดกึ่งกลางข้อความ */
+    font-size: 20px; /* ขนาดฟอนต์ */
+}
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* สไตล์สำหรับ Header */
+.container {
+    display: flex;
+  }
+  
+  .image, .text {
+    width: 50%;
+  }
+  
+  .image img {
+    width: 100%;
+    height: 100%;
+  }
+  .container {
+    border: 1px solid rgb(0, 0, 0); /* เพิ่มขอบรอบ container */
+    height: 200px; /* กำหนดความสูงของ container */
+  }
+  
+  .image img {
+    object-fit: contain; /* ปรับขนาดรูปภาพให้พอดีกับพื้นที่โดยไม่บิดเบือน */
+  }
+  
+  .text {
+    background-color: #f0f0f0; /* เปลี่ยนสีพื้นหลังของส่วนข้อความ */
+    padding: 15px; /* เพิ่มระยะห่างภายในส่วนข้อความ */
+    line-height: 16px;
+  }
+  /* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .textone {
+        font-size: 1.25rem;
+    }
+
+    .texttwo {
+        font-size: 1rem;
+    }
+
+    h1.mix {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .container {
+        flex-direction: column; /* Stack image and text vertically */
+        height: auto; /* Adjust height automatically */
+    }
+
+    .image, .text {
+        width: 100%; /* Full width for each section */
+    }
+}
